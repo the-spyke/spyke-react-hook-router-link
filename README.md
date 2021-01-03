@@ -2,9 +2,9 @@
 
 <!-- [![downloads](https://img.shields.io/npm/dm/@spyke/react-hook-router-link)](https://www.npmjs.com/package/@spyke/react-hook-router-link)
 [![ci](https://github.com/the-spyke/spyke-react-hook-router-link/workflows/CI/badge.svg)](https://github.com/the-spyke/spyke-react-hook-router-link/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/the-spyke/spyke-react-hook-router-link/branch/main/graph/badge.svg)](https://codecov.io/gh/the-spyke/spyke-react-hook-router-link) -->
+[![codecov](https://codecov.io/gh/the-spyke/spyke-react-hook-router-link/branch/main/graph/badge.svg)](https://codecov.io/gh/the-spyke/spyke-react-hook-router-link)
 [![rms](https://img.shields.io/badge/RMS-0.3.0-blue)](https://github.com/the-spyke/rms)
-[![license](https://img.shields.io/npm/l/spyke/react-hook-router-link.svg)](https://github.com/the-spyke/spyke-react-hook-router-link/blob/master/LICENSE)
+[![license](https://img.shields.io/npm/l/spyke/react-hook-router-link.svg)](https://github.com/the-spyke/spyke-react-hook-router-link/blob/master/LICENSE) -->
 
 An extract from the `react-router` link handling logic for easier integration with 3rd party UI libraries.
 

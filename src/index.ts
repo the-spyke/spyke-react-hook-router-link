@@ -49,7 +49,7 @@ export function useHref<S>(to: LocationDescriptor<S>) {
 	return normalizedLocation ? history.createHref(normalizedLocation) : "";
 }
 
-export function useLink<S>(to: LocationDescriptor<S>, replace = false) {
+export function useLinkState<S>(to: LocationDescriptor<S>, replace = false) {
 	return {
 		href: useHref(to),
 		onClick: useGoTo(to, replace),

@@ -18,18 +18,18 @@ yarn add @spyke/react-hook-router-link
 
 ## Usage
 
-`useLink` gives you `{ href, onClick }` props for your anchors and links:
+`useLinkState` gives you `{ href, onClick }` props for your anchors and links:
 
 ```js
-import { useLink } from "@spyke/react-hook-router-link";
+import { useLinkState } from "@spyke/react-hook-router-link";
 
 const NavBar = () => {
   return (
     <Header>
-      <Anchor label="WebApp" {...useLink("/")} />
+      <Anchor label="WebApp" {...useLinkState("/")} />
       <Nav direction="row">
-        <Anchor label="Login" icon={<Login />} {...useLink("/login")} />
-        <Anchor label="Signup" icon={<Sign />} {...useLink("/signup")} />
+        <Anchor label="Login" icon={<Login />} {...useLinkState("/login")} />
+        <Anchor label="Signup" icon={<Sign />} {...useLinkState("/signup")} />
       </Nav>
     </Header>
   );

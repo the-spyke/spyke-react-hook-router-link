@@ -1,0 +1,80 @@
+{
+  "name": "@spyke/react-hook-router-link",
+  "version": "0.1.0",
+  "description": "A hook for react-router and UI libraries to switch routes on click without overhead.",
+  "private": true,
+  "author": "Anton Alexandrenok",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "yarn build:js && yarn build:types",
+    "build:js": "babel src --out-dir build/lib --extensions \".ts\" --source-maps",
+    "build:types": "tsc  --emitDeclarationOnly --outDir build/lib",
+    "clear": "rm -rf build coverage dist node_modules",
+    "dist": "cd dist && npm pack ../build",
+    "lint": "eslint -f unix '**/*.@(cjs|mjs|js|ts)'",
+    "prebuild": "rm -rf build && mkdir build && cp -v LICENSE package.json README.md build",
+    "predist": "rm -rf dist && mkdir dist",
+    "test": "jest",
+    "ts": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "history": "^4.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-router": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@jest/globals": "^26.6.2",
+    "@spyke/eslint-config": "^1.1.0",
+    "@testing-library/dom": "^7.29.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "@types/history": "^4.7.8",
+    "@types/react": "^17.0.0",
+    "@types/react-router": "^5.1.7",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-add-import-extension": "^1.4.3",
+    "confusing-browser-globals": "^1.0.10",
+    "core-js": "^3.8.1",
+    "eslint": "^7.16.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "history": "^4.10.1",
+    "jest": "^26.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "react-router": "^5.2.0",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-spyke/spyke-react-hook-router-link"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "react hook",
+    "react-router",
+    "router"
+  ]
+}

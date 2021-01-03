@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Node
+node_modules/
+.pnp.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Artifacts
+build/
+coverage/
+dist/
+
+# Editors
+.vscode/

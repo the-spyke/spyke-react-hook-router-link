@@ -1,0 +1,39 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 15
+    - name: yarn install
+      # "--frozen-lockfile" doesn't work, see https://github.com/yarnpkg/yarn/issues/5840
+      run: |
+        CKSUM_BEFORE=$(cksum yarn.lock)
+        yarn install
+        CKSUM_AFTER=$(cksum yarn.lock)
+        if [[ $CKSUM_BEFORE != $CKSUM_AFTER ]]; then
+          echo "yarn.lock is outdated"
+          exit 1
+        fi
+    - run: yarn lint
+    - run: yarn test --ci --runInBand
+      env:
+        NODE_ENV: test
+    - run: yarn build
+      env:
+        NODE_ENV: production
+    - run: yarn dist
+      env:
+        NODE_ENV: production
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ${{ format('spyke-react-hook-router-link_{0}-{1}', github.run_number, github.sha) }}
+        path: "dist/*"

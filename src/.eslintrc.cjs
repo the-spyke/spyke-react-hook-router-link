@@ -10,6 +10,7 @@ module.exports = {
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:testing-library/react",
+		"plugin:jest-dom/recommended",
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -17,6 +18,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		"jest-dom",
 		"react",
 		"react-hooks",
 		"testing-library",

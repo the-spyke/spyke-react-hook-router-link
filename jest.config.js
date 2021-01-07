@@ -1,21 +1,20 @@
 export default {
 	collectCoverageFrom: [
-		"src/**/*.(js|ts)",
+		"<rootDir>/src/**/*.(js|ts)",
 	],
 	coverageProvider: "v8",
+	injectGlobals: false,
 	setupFiles: [
 		"core-js/stable/index.js",
 	],
 	setupFilesAfterEnv: [
-		"@testing-library/jest-dom",
-	],
-	testMatch: [
-		"**/*.test.js",
+		"./config/jest.env.setup.ts",
 	],
 	testEnvironment: "jsdom",
-	transform: {
-		"\\.(js|ts)$": "<rootDir>/node_modules/babel-jest",
-	},
+	testMatch: [
+		"<rootDir>/src/**/*.test.js",
+	],
+	testRunner: "jest-circus/runner",
 	transformIgnorePatterns: [],
 	resetMocks: true,
 };

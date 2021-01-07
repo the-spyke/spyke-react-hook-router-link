@@ -4,13 +4,13 @@ const IS_TEST_ENV = process.env.NODE_ENV === "test";
 
 module.exports = {
 	plugins: [
-		[
+		!IS_TEST_ENV && [
 			"babel-plugin-add-import-extension",
 			{
 				extension: "js",
 			}
 		],
-	],
+	].filter(Boolean),
 	presets: [
 		IS_TEST_ENV && [
 			"@babel/preset-env",

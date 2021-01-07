@@ -1,6 +1,6 @@
 {
   "name": "@spyke/react-hook-router-link",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A hook for react-router and UI libraries to switch routes on click without overhead.",
   "private": true,
   "author": "Anton Alexandrenok",
@@ -17,6 +17,7 @@
     "lint": "eslint -f unix '**/*.@(cjs|mjs|js|ts)'",
     "prebuild": "rm -rf build && mkdir build && cp -v LICENSE package.json README.md build",
     "predist": "rm -rf dist && mkdir dist",
+    "release": "standard-version",
     "test": "jest",
     "ts": "tsc --noEmit"
   },
@@ -32,6 +33,7 @@
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
     "@jest/globals": "^26.6.2",
+    "@spyke/conventional-changelog-preset": "^1.0.5",
     "@spyke/eslint-config": "^1.1.0",
     "@testing-library/dom": "^7.29.0",
     "@testing-library/jest-dom": "^5.11.6",
@@ -59,6 +61,7 @@
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "react-router": "^5.2.0",
+    "standard-version": "^9.1.0",
     "typescript": "^4.1.3"
   },
   "files": [

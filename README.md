@@ -19,6 +19,12 @@ Another approach would be to make a custom component or a HoC, but in both cases
 
 Hooks solve excess nesting, so there you have a couple of hooks with [extracted logic](https://github.com/ReactTraining/react-router/issues/7390) from `react-router`'s `Link` component to apply to your own components to make them behave the same way.
 
+## Prerequisites
+
+This package is compliant with the [Raw Module Specification 0.3.0](https://github.com/the-spyke/rms) and provides original stable JavaScript code in the `ESM` format.
+
+You may need to compile the code and/or load polyfills depending on your environment. Look for exact minimum versions of `@babel/preset-env` and `core-js` in the `package.json`. Most modern apps already have such infrastructure or use similar tools, so it should be a non-issue.
+
 ## Installation
 
 ```sh

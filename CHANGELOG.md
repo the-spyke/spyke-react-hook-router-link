@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [v1.0.1](https://github.com/the-spyke/spyke-react-hook-router-link/compare/v1.0.0...v1.0.1) (2021-01-12)
+
+### :memo: Documentation
+
+* Add a section about RMS ([b87315b](https://github.com/the-spyke/spyke-react-hook-router-link/commit/b87315b01ba3382b72a219321db6d690498b2c84))
+
 ## [v1.0.0] (2021-01-07)
 
 ### :nail_care: Polish

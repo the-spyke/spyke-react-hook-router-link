@@ -1,6 +1,6 @@
 {
   "name": "@spyke/react-hook-router-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A hook for react-router and UI libraries to switch routes on click without overhead.",
   "author": "Anton Alexandrenok",
   "license": "MIT",
